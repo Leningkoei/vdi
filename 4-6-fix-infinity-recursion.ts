@@ -147,7 +147,7 @@ const delay = (delayed: () => any, time: number) =>
 
 const customEffect = (): void => {
 
-  obj.foo++;
+  console.log(obj.foo++);
 
 };
 
@@ -157,6 +157,6 @@ registerEffect(customEffect);
 
 while (true) {
 
-  await delay(() => console.log(obj.foo++), 1000);
+  await delay(() => obj.foo++, 1000);
 
 };
