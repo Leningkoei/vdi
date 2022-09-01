@@ -183,8 +183,6 @@ const trigger = (target: Object, key: string) : void => {
 
   const dependsToRun: Set<Effect> = new Set<Effect>(depends);
 
-  console.log(dependsToRun);
-
   dependsToRun.forEach((currentEffect: Effect) =>
     currentEffect.content());
 
